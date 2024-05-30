@@ -1,0 +1,50 @@
+.section-about {
+    width: 100%;
+    padding: 10px;
+}
+
+.container-title-about {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 40px 0 10px 0;
+
+}
+
+.title-about {
+    color: #fff;
+    font-size: 30px;
+font-family: 'Poppins', sans-serif;
+
+}
+
+.section-details {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+}
+
+.title-details {
+    color: #fff;
+font-family: 'Poppins', sans-serif;
+
+}
+
+.about-details {
+    color: #c6c6c6;
+    line-height: 1.2;
+    font-size: 18px;
+font-family: 'Inconsolata', monospace;
+
+}
+
+
+
+
+
+
+
+
+
+
