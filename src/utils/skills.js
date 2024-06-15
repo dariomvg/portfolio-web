@@ -12,6 +12,7 @@ import iconAstro from "../assets/icons-skills/astro.svg";
 import iconNext from "../assets/icons-skills/next.svg";
 import iconPostgre from "../assets/icons-skills/postgresql.svg";
 import iconVercel from "../assets/icons-skills/vercel.svg";
+import iconSupabase from "../assets/icons-skills/supabase.svg";
 
 export const skills = {
   front: [
@@ -89,5 +90,10 @@ export const skills = {
       icon: iconVercel,
       title: "Vercel",
     },
+    {
+      id: 5,
+      icon: iconSupabase,
+      title: "Supabase",
+    }
   ],
 };

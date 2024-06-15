@@ -45,27 +45,17 @@
 
 .select-lenguage {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   color: #fff;
   padding: 5px;
   background-color: #2b2f36;
-  border-radius: 8px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
 }
-.container-controls {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-select {
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  outline: none;
-}
-option {
-  color: #000;
+.select-lenguage:hover {
+  border-color: #98989f;
 }
 
 @media (max-width: 768px) {
@@ -79,9 +69,7 @@ option {
   .container-links {
     flex-direction: column;
   }
-  .container-controls {
-    gap: 16px;
-  }
+
   .navbar {
     flex-direction: column;
     flex-wrap: wrap;

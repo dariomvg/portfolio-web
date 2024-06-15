@@ -5,22 +5,12 @@ import { useContextLenguage } from "@/contexts/ContextLenguage";
 import Image from "next/image";
 
 export const CardProject = ({ project }) => {
-  const { image, icon1, icon2, icon3, title, link, repo } = project;
-  const {lenguage} = useContextLenguage(); 
+  const {  icon1, icon2, icon3, title, link, repo } = project;
+  const { lenguage } = useContextLenguage(); 
   const { repository, visit } = lenguages[lenguage];
 
   return (
     <article className="card-project">
-      <div className="container-card">
-        <Image
-          src={image}
-          width={300}
-          height={200}
-          alt="image project"
-          title="titulo"
-          className="image-project"
-          loading="lazy"
-        />
         <div className="details-project">
           <h2 className="title-card-project">{title}</h2>
           <div className="container-icons-tech">
@@ -79,7 +69,6 @@ export const CardProject = ({ project }) => {
             </a>
           </div>
         </div>
-      </div>
     </article>
   );
 };

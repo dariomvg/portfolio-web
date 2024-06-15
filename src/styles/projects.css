@@ -19,25 +19,17 @@ font-family: 'Poppins', sans-serif;
 
 .section-cards-projects {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: start;
+  flex-wrap: wrap;
   gap: 18px;
 }
 
 .card-project {
-  width: 100%;
+  width: 350px;
   padding: 10px;
   border-radius: 10px;
   background-color: #202127;
-}
 
-.container-card {
-  display: flex;
-  gap: 30px;
-}
-
-.image-project {
-  border-radius: 10px;
 }
 
 .details-project {
@@ -62,11 +54,10 @@ font-family: 'Poppins', sans-serif;
 
 .container-btn-projects {
   display: flex;
-  flex-direction: column;
   gap: 14px;
 }
 .link-visit {
-  width: 200px;
+  width: 100%;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -95,4 +86,16 @@ font-family: 'Poppins', sans-serif;
   .link-visit {
     width: 100%;
   }
+
+  .card-project {
+    width: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .section-cards-projects {
+    justify-content: center;
+  }
+
 }

@@ -2,7 +2,6 @@
 import Image from "next/image";
 import "../styles/projects.css";
 import imgProject from "@/assets/icons/projects.svg";
-
 import { CardProject } from "./CardProject";
 import { projects as utilsProjects } from "@/utils/projects";
 import { lenguages } from "@/utils/lenguages";

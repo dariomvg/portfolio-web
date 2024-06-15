@@ -2,14 +2,15 @@
 import iconGithub from "@/assets/icons/github.svg";
 import iconLinkedin from "@/assets/icons/linkedin.svg";
 import Image from "next/image";
-import "../styles/home.css";
 import { ButtonCV } from "./ButtonCV";
 import { useContextLenguage } from "@/contexts/ContextLenguage";
 import { lenguages } from "@/utils/lenguages";
+import "../styles/home.css";
 
 export const Home = () => {
   const {lenguage} = useContextLenguage(); 
   const { subtitle, detail } = lenguages[lenguage];
+
   return (
     <section className="section-home">
       <div className="container-titles">

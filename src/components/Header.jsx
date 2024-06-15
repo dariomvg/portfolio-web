@@ -1,22 +1,18 @@
 "use client";
 import Image from "next/image";
 import menu from "@/assets/icons/menu.svg";
-import logo from "@/assets/images/logo.png";
-import iconLenguage from "@/assets/icons/lenguage.svg";
-import "../styles/header.css";
 import { useState } from "react";
 import { useContextLenguage } from "@/contexts/ContextLenguage";
 import { lenguages } from "@/utils/lenguages";
+import "../styles/header.css";
 
 export const Header = () => {
   const [active, setActive] = useState(false);
-  const {handleLenguage, lenguage} = useContextLenguage(); 
+  const { lenguage, setChangeLenguage, changeLenguage } = useContextLenguage();
   const { main, projects, skills, about } = lenguages[lenguage];
   const handleMenu = () => setActive(!active);
 
-  const handleLanguageChange = (e) => {
-    handleLenguage(e.target.value);
-  };
+  const handleLenguage = () => setChangeLenguage(!changeLenguage);
 
   return (
     <header className={`header ${active && "active"}`}>
@@ -27,7 +23,7 @@ export const Header = () => {
           rel="noopener noreferrer"
           target="_blank">
           <Image
-            src={logo}
+            src="/logo.png"
             width={50}
             height={50}
             alt="logo"
@@ -60,20 +56,9 @@ export const Header = () => {
           <a href="#sobremi" className="link-nav" rel="noopener noreferrer">
             {about}
           </a>
-          <div className="select-lenguage">
-            <Image
-              src={iconLenguage}
-              width={20}
-              height={20}
-              alt="lenguages"
-              className="icon-lenguage"
-              loading="lazy"
-            />
-            <select value={lenguage} onChange={handleLanguageChange}>
-              <option value="es">Spanish</option>
-              <option value="en">English</option>
-            </select>
-          </div>
+          <button className="select-lenguage" onClick={handleLenguage}>
+            {changeLenguage ? "ES" : "EN"}
+          </button>
         </div>
       </nav>
     </header>

@@ -1,5 +1,5 @@
 "use client";
-const { createContext, useContext, useState } = require("react");
+const { createContext, useContext, useState, useEffect } = require("react");
 
 const ContextLenguage = createContext();
 
@@ -11,13 +11,18 @@ export const useContextLenguage = () => {
 
 export default function LenguageProvider({ children }) {
   const [lenguage, setLenguage] = useState("es");
+  const [changeLenguage, setChangeLenguage] = useState(false);
 
-  const handleLenguage = (lang) => {
-    setLenguage(lang);
-  };
-
+  useEffect(() => {
+      if(!changeLenguage){
+        setLenguage("es");
+      }else {
+        setLenguage("en")
+      }
+  }, [changeLenguage])
+  
   return (
-    <ContextLenguage.Provider value={{ handleLenguage, lenguage }}>
+    <ContextLenguage.Provider value={{ lenguage, setChangeLenguage, changeLenguage }}>
       {children}
     </ContextLenguage.Provider>
   );
